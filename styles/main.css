@@ -97,12 +97,33 @@ section#home {
   justify-content: center;
   background: url(../main/logo&back/back.jpg) no-repeat center center/cover;
 }
-
 section#vojta {
   text-align: center;
   justify-content: center;
   background: url(../main/logo&back/backvojta.jpg) no-repeat center center/cover;
 }
+
+.w3-button{
+  width:150px;
+  position: relative;
+	text-align: center;
+  left: 44%;
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.w3-button:hover{
+  background-color: #4CAF50 !important;
+}
+
 section#michal {
   text-align: center;
   justify-content: center;
@@ -113,7 +134,6 @@ section#kiril {
   justify-content: center;
   background: url(../main/logo&back/backmichal.jpg) no-repeat center center/cover;
 }
-
 section#underContact{
   background-color: #131313;
   height: 70px;
