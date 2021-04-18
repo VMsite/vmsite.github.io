@@ -22,6 +22,8 @@ body {
 }
 
 .lead {
+  position: relative;
+  right: 30px;
   font-size: 1.5rem;
 }
 
@@ -166,9 +168,11 @@ section #underContact h3{
 }
 
 .burger{
+  position: relative;
+  top: 8px;
+  right: 7px;
   display: none;
   cursor: pointer;
-  right: 5%;
 }
 
 .burger div{
