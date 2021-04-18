@@ -95,12 +95,12 @@ section p{
 section#home {
   text-align: center;
   justify-content: center;
-  background: url(../main/logo&back/back.jpg) no-repeat center center/cover;
+  background: url(../logo&back/back.jpg) no-repeat center center/cover;
 }
 section#vojta {
   text-align: center;
   justify-content: center;
-  background: url(../main/logo&back/backvojta.jpg) no-repeat center center/cover;
+  background: url(../logo&back/backvojta.jpg) no-repeat center center/cover;
 }
 
 .w3-button{
@@ -127,12 +127,12 @@ section#vojta {
 section#michal {
   text-align: center;
   justify-content: center;
-  background: url(../main/logo&back/backkiril.jpg) no-repeat center center/cover;
+  background: url(../logo&back/backkiril.jpg) no-repeat center center/cover;
 }
 section#kiril {
   text-align: center;
   justify-content: center;
-  background: url(../main/logo&back/backmichal.jpg) no-repeat center center/cover;
+  background: url(../logo&back/backmichal.jpg) no-repeat center center/cover;
 }
 section#underContact{
   background-color: #131313;
@@ -147,8 +147,6 @@ section #underContact h3{
   font-family: 'IBM Plex Mono';
   justify-content: center;
   text-align: center;
-  margin-top: 25px;
-  margin-left: 1780px;
 }
 
 .icon-button {
@@ -242,10 +240,6 @@ section #underContact h3{
 	color: white;
 }
 
-.navbar-active{
-      height: 35%;
-}
-
 .showNav {
   pointer-events: inherit !important;
   opacity: 1 !important;
@@ -267,12 +261,10 @@ section #underContact h3{
 }
 
 @media screen and (min-width: 769px){
-  .navbar-active{
-    height: 60px;
-  }
 }
 
 @media screen and (max-width: 768px){
+
   .navbar-list{
     flex-direction: column;
   }
@@ -280,17 +272,22 @@ section #underContact h3{
     pointer-events: none;
     opacity: 0;
   }
-  .burger{
+  .navbar ul li{
+    display: none;
+  }
+  .navbar-active ul li{
     display: block;
+  }
+
+  .burger{
+    display:block;
     margin-top: 2%;
     margin-right: 1%;
   }
-}
 
 .toggle .line1{
   transform: rotate(-45deg) translate(-3px, 8px);
-}
-.toggle .line2{
+}.toggle .line2{
   opacity: 0;
 }
 .toggle .line3{
