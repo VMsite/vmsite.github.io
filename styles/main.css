@@ -277,6 +277,8 @@ section #underContact h3{
   }
   .navbar-active ul li{
     display: block;
+    margin: 0 1rem;
+    padding: 0.1rem;
   }
 
   .burger{
