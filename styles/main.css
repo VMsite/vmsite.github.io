@@ -105,21 +105,6 @@ section#vojta {
   background: url(../logo&back/backvojta.jpg) no-repeat center center/cover;
 }
 
-.w3-button{
-  width:150px;
-  position:relative;
-  left: 32%;
-	text-align: center;
-  background-color: gray;
-  border: none;
-  color: white;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  cursor: pointer;
-}
-
 .w3-button:hover{
   background-color: #4CAF50 !important;
 }
@@ -263,9 +248,31 @@ section #underContact h3{
 }
 
 @media screen and (min-width: 769px){
+  .w3-button{
+    width:150px;
+    position:relative;
+    left: 44%;
+  	text-align: center;
+    background-color: gray;
+    border: none;
+    color: white;
+    text-decoration: none;
+    padding: 15px 32px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 768px){
+  .navbar{
+    background: transparent;
+  }
+
+  .navbar-active{
+    background: rgba(0,0,0,0.7);
+  }
 
   .navbar-list{
     flex-direction: column;
@@ -289,6 +296,21 @@ section #underContact h3{
     display:block;
     margin-top: 2%;
     margin-right: 1%;
+  }
+
+  .w3-button{
+    width:150px;
+    position:relative;
+    left: 32%;
+  	text-align: center;
+    background-color: gray;
+    border: none;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
   }
 
 .toggle .line1{
