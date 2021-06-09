@@ -97,12 +97,10 @@ section p{
 section#home {
   text-align: center;
   justify-content: center;
-  background: url(../logo&back/back.jpg) no-repeat center center/cover;
 }
 section#vojta {
   text-align: center;
   justify-content: center;
-  background: url(../logo&back/backvojta.jpg) no-repeat center center/cover;
 }
 
 .w3-button:hover{
@@ -112,12 +110,10 @@ section#vojta {
 section#michal {
   text-align: center;
   justify-content: center;
-  background: url(../logo&back/backkiril.jpg) no-repeat center center/cover;
 }
 section#kiril {
   text-align: center;
   justify-content: center;
-  background: url(../logo&back/backmichal.jpg) no-repeat center center/cover;
 }
 section#underContact{
   background-color: #131313;
