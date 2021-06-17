@@ -1,3 +1,8 @@
+window.addEventListener("load", function () {
+  const loader = document.querySelector(".loader");
+  loader.className += " hidden"; // class "loader hidden"
+});
+
 $('.navbar a').on('click', function (e) {
    if (this.hash !== '') {
      e.preventDefault();
