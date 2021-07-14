@@ -3,10 +3,13 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;300&family=Noto+Serif&family=Quicksand:wght@300;400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Prata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap');
 
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -25,10 +28,6 @@ body {
 .dark-mode {
   background-color: #333;
   color: white;
-}
-
-.lead {
-  font-size: 1.5rem;
 }
 
 .loader {
@@ -120,6 +119,12 @@ section {
 
 section h1 {
   font-size: 4rem;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.lead {
+  font-size: 1.5rem;
+  font-family: 'Play', sans-serif;
 }
 
 section#hub {
@@ -180,7 +185,7 @@ section#photos {
   text-align: center;
   justify-content: center;
 }
-section#about {
+section#contactus {
   justify-content: center;
   text-align: center;
 }
@@ -192,11 +197,15 @@ section#under {
   text-align: center;
 }
 
-section #under h3 {
+section#under h3 {
   position: relative;
   font-family: 'IBM Plex Mono';
   justify-content: center;
   text-align: center;
+}
+
+section#under a{
+  color: white;
 }
 
 .icon-button {
@@ -222,7 +231,7 @@ section #under h3 {
   position: absolute;
   cursor: pointer;
   margin-right: 92.5%;
-  margin-top: 1%;
+  margin-top: 15px;
 }
 
 .dark-mode .iconMoon {
@@ -234,7 +243,7 @@ section #under h3 {
   position: absolute;
   cursor: pointer;
   margin-right: 92.5%;
-  margin-top: 1%;
+  margin-top: 15px;
 }
 
 .dark-mode .iconSun {

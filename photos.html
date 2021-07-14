@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name ="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/photos.css">
+    <title>VMK Photos</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar">
+        <ul>
+          <a class="iconMoon" id="dark"><i class="fa fa-moon-o fa-2x"></i></a>
+          <a class="iconSun" id="light"><i class="fa fa-sun-o fa-2x"></i></a>
+          <li><i class="fa fa-angle-left fa-lg"></i> <a href="./index.html" class="icon-back">Back</a></li>
+          <a class="iconSun" onclick="darkModeToggle()" style="display: none;"><i class='fa fa-sun-o fa-2x'></i></a>
+        </ul>
+        <div class="burger">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </nav>
+      ---
+      ----
+      -----
+      ---
+      ----
+      -----
+      ---
+      ----
+      -----
+      <section class="main">
+    	<div class="row">
+    	<div class="column">
+    		<img onclick="expand(this)" src="./photos/mask.png" style="width:100%">
+    		<img src="./photos/mask2.png" style="width:100%">
+    		<img src="./photos/virusearth.png" style="width:100%">
+    	</div>
+    	<div class="column">
+    		<img src="./photos/mask3.png" style="width:100%">
+    		<img src="./photos/heart.png" style="width:100%">
+		    <img src="./photos/coffee.png" style="width:100%">
+    	</div>
+    	<div class="column">
+    		<img src="./photos/mask.png" style="width:100%">
+    		<img src="./photos/mask2.png" style="width:100%">
+    		<img src="./photos/virusearth.png" style="width:100%">
+    	</div>
+    	<div class="column">
+    		<img src="./photos/mask3.png" style="width:100%">
+    		<img src="./photos/heart.png" style="width:100%">
+		    <img src="./photos/coffee.png" style="width:100%">
+    	</div>
+    </div>
+    </section>
+    </div>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+      <script src="./functions/navbar.js" type="text/javascript"></script>
+      <script src="./functions/darkmode.js" type="text/javascript"></script>
+  </body>
+</html>
