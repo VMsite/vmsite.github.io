@@ -1,6 +1,8 @@
 # Portfolio
 
-VMportfolio je veřejné portfolio pro osoby Vojtěch Döme a Michal Hejduk.
+VMportfolio je veřejné portfolio pro osoby Vojtěch Döme, Michal Hejduk a Kirill Rumyantsev.
+Portfolio je přednostně určeno projekt Erasmus+ a tak dokázat, že jsme schopní něčeho dosáhnout.
+Každý z výše uvedených je zodpovědný za určitou část projektu. Průběžně stránky vylepšujeme a zkrášlujeme.
 
 ## Usage
 
