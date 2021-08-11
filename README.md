@@ -10,15 +10,15 @@ Portfolio je dostupné pro všechny případné zájemce, není nijak omezen.
 
 ## Used things
 
-Nebyly použity žádné frameworky
+- Nebyly použity žádné frameworky
 
-Fonty jsme vybírali přes [Google Fonts](https://fonts.googleapis.com/)
+- Fonty jsme vybíráme přes [Google Fonts](https://fonts.googleapis.com/)
 
-Na testování jsme použili [Postman](https://web.postman.co/) a http-server přes [Node.js](https://nodejs.org/en/)
+- Na testování jsme použili [Postman](https://web.postman.co/) a http-server přes [Node.js](https://nodejs.org/en/)
 
-Doména byla zakoupena prostřednictvím Github Student plánu na [Name](https://www.name.com/)
+- Doménu jsme obdrželi prostřednictvím Github Student plánu na [Name](https://www.name.com/)
 
-> A hosting nám zajišťuje [Github](https://github.com/VMsite/vmsite.github.io)
+- Celkový hosting nám zajišťuje [Github](https://github.com/VMsite/vmsite.github.io)
 
 ## License
 # MIT License
