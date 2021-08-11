@@ -41,7 +41,6 @@ $('.navbar a').on('click', function (e) {
       flag = 1;
     }
 
-
   else{
     $('.one, .two, .three').animate({
         top:'300px',
