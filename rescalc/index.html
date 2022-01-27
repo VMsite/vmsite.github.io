@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulačka</title>
+    <style>
+      html {
+        background-color: #060930;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+      }
+      #smallDevice {
+        display: none;
+      }
+      #bigDevice {
+        display: none;
+      }
+      .result {
+        grid-area: result;
+      }
+      .MEX {
+        grid-area: MEX;
+      }
+      .Mplus {
+        grid-area: Mplus;
+      }
+      .Mminus {
+        grid-area: Mminus;
+      }
+      .MR {
+        grid-area: MR;
+      }
+      .MC {
+        grid-area: MC;
+      }
+      .GT {
+        grid-area: GT;
+      }
+      .AC {
+        grid-area: AC;
+      }
+      .seven {
+        grid-area: seven;
+      }
+      .eight {
+        grid-area: eight;
+      }
+      .nine {
+        grid-area: nine;
+      }
+      .percent {
+        grid-area: percent;
+      }
+      .tick {
+        grid-area: tick;
+      }
+      .plusminus {
+        grid-area: plusminus;
+      }
+      .four {
+        grid-area: four;
+      }
+      .five {
+        grid-area: five;
+      }
+      .six {
+        grid-area: six;
+      }
+      .x {
+        grid-area: x;
+      }
+      .slash {
+        grid-area: slash;
+      }
+      .right {
+        grid-area: right;
+      }
+      .one {
+        grid-area: one;
+      }
+      .two {
+        grid-area: two;
+      }
+      .three {
+        grid-area: three;
+      }
+      .plus {
+        grid-area: plus;
+      }
+      .minus {
+        grid-area: minus;
+      }
+      .C {
+        grid-area: C;
+      }
+      .zero {
+        grid-area: zero;
+      }
+      .dzero {
+        grid-area: dzero;
+      }
+      .dot {
+        grid-area: dot;
+      }
+      .equal {
+        grid-area: equal;
+      }
+      .grid-container {
+        display: grid;
+        background-color: rgb(75, 75, 129);
+        width: 50%;
+        height: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10%;
+        grid-gap: 10px;
+        padding: 20px;
+        border-radius: 20px;
+        grid-template-areas:
+          "result result result result result result result result result"
+          "MEX MEX Mplus Mminus MR MC MC GT GT"
+          "AC AC seven eight nine percent percent tick tick"
+          "plusminus plusminus four five six x x slash slash"
+          "right right one two three plus plus minus minus"
+          "C C zero dzero dot plus plus equal equal";
+      }
+      .grid-container > div {
+        text-align: center;
+        font-size: 30px;
+        cursor: pointer;
+        display: flex;
+        border-radius: 5px;
+      }
+      .grid-container > div:hover:not(.result) {
+        background-color: rgb(50, 50, 50);
+        transform: scale(0.9);
+      }
+      .result {
+        background-color: #424569;
+        color: grey;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 20px;
+      }
+      .MEX,
+      .Mplus,
+      .Mminus,
+      .MR,
+      .MC,
+      .GT,
+      .AC,
+      .plusminus,
+      .right,
+      .C,
+      .plus,
+      .x,
+      .slash,
+      .tick,
+      .minus,
+      .percent,
+      .equal,
+      .plus {
+        background-color: #040d3f;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      .one,
+      .two,
+      .three,
+      .four,
+      .five,
+      .six,
+      .seven,
+      .eight,
+      .nine,
+      .zero,
+      .dzero,
+      .dot {
+        background-color: #3a438c;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      @media (max-width: 359px) {
+        .grid-container {
+          display: none;
+        }
+        #smallDevice {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          color: white;
+        }
+      }
+      @media (min-width: 360px) {
+        .grid-container {
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto;
+          grid-gap: 15px;
+        }
+        .grid-container > div {
+          font-size: 12px;
+        }
+        .grid-container > div:not(.result) {
+          width: 100%;
+        }
+        .result {
+          width: 95%;
+        }
+      }
+
+      @media (min-width: 1000px) {
+        .grid-container > div {
+          font-size: 20px;
+        }
+      }
+      /*@media (min-width: 1401px) {
+        .grid-container {
+          display: none;
+        }
+        #bigDevice {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          color: white;
+        }
+      }*/
+    </style>
+  </head>
+  <body>
+    <div id="smallDevice">Your device is too small</div>
+    <div id="bigDevice">Your device is too big</div>
+    <div class="grid-container">
+      <div class="result">120 + 78 - 20 / 2</div>
+      <div class="MEX">M/EX</div>
+      <div class="Mplus">M+</div>
+      <div class="Mminus">M-</div>
+      <div class="MR">MR</div>
+      <div class="MC">MC</div>
+      <div class="GT">GT</div>
+      <div class="AC">AC</div>
+      <div class="seven">7</div>
+      <div class="eight">8</div>
+      <div class="nine">9</div>
+      <div class="percent">%</div>
+      <div class="tick">✓</div>
+      <div class="plusminus">+-</div>
+      <div class="four">4</div>
+      <div class="five">5</div>
+      <div class="six">6</div>
+      <div class="x">x</div>
+      <div class="slash">/</div>
+      <div class="right">➤</div>
+      <div class="one">1</div>
+      <div class="two">2</div>
+      <div class="three">3</div>
+      <div class="plus">+</div>
+      <div class="minus">-</div>
+      <div class="C">C</div>
+      <div class="zero">0</div>
+      <div class="dzero">00</div>
+      <div class="dot">.</div>
+      <div class="equal">=</div>
+    </div>
+  </body>
+</html>
