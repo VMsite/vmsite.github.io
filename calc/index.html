@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulačka</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+        html{
+            background-color: #30061a;
+            font-family: 'Oswald', sans-serif;
+            text-decoration: none;
+        }
+         .result { grid-area: result;}
+         .MEX { grid-area: MEX; }
+         .Mplus { grid-area: Mplus; }
+         .Mminus { grid-area: Mminus; }
+         .MR { grid-area: MR; }
+         .MC { grid-area: MC; }
+         .GT { grid-area: GT; }
+         .AC { grid-area: AC; }
+         .seven { grid-area: seven; }
+         .eight { grid-area:eight; }
+         .nine { grid-area:nine; }
+         .percent { grid-area: percent; }
+         .tick { grid-area: tick; }
+         .plusminus { grid-area: plusminus; }
+         .four { grid-area: four; }
+         .five { grid-area: five; }
+         .six { grid-area: six; }
+         .x { grid-area: x; }
+         .slash { grid-area: slash; }
+         .right { grid-area: right; }
+         .one { grid-area: one; }
+         .two { grid-area: two; }
+         .three { grid-area: three; }
+         .plus { grid-area: plus; }
+         .minus { grid-area: minus; }
+         .C { grid-area: C; }
+         .zero { grid-area: zero; }
+         .dzero { grid-area: dzero; }
+         .dot { grid-area: dot; }
+         .equal { grid-area: equal; }
+         .toleft { grid-area: toleft; }
+         .toright { grid-area: toright; }
+         .Ans { grid-area: Ans; }
+         .expo { grid-area: expo; }
+         .e { grid-area: e; }
+         .pi { grid-area: pi; }
+         .log { grid-area: log; }
+         .xdownto2 { grid-area: xdownto2; }
+         .xto2 { grid-area: xto2; }
+         .xshout { grid-area: xshout; }
+         .grid-container {
+         display: grid;
+         background-color: rgb(168, 79, 131);
+         width: 700px;
+         height: 400px;
+         margin-left: auto;
+         margin-right: auto;
+         margin-top: 150px;
+         grid-gap: 10px;
+         padding: 15px;
+         border-radius: 5px;
+         grid-template-areas:
+         'result result result result result result result result result'
+         'MEX MEX Mplus Mminus MR MC MC GT GT'
+         'AC AC seven eight nine percent percent tick tick'
+         'plusminus plusminus four five six x x slash slash'
+         'right right one two three e pi minus minus'
+         'C C zero dzero dot plus plus xto2 xdownto2'
+         'toleft toright Ans expo log plus plus xshout equal';
+         }
+         .grid-container > div {
+         text-align: center;
+         font-size: 30px;
+         display: flex;
+         border-radius: 5px;
+         }
+         .grid-container > div:hover:not(.result){
+            background-color: rgb(141, 95, 127);
+            transform: rotate(.01turn) scale(.9);
+            color: #30061a;
+         }
+         .result{
+            background-color: #694264;
+            color: grey;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 20px;
+         }
+         .MEX, .Mplus, .Mminus, .MR, .start, .MC, .xdownto2, .xshout, .GT, .e, .pi, .AC, .plusminus, .right, .toleft, .toright, .C, .plus, .x, .slash, .tick, .minus, .percent, .equal, .plus{ 
+            background-color: #3f042b;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+         }
+        .xto2{
+            background-color: #3f042b;
+            color: white;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .one, .two, .three, .four, .five, .six, .Ans, .log, .expo, .seven, .eight, .nine, .zero, .dzero, .dot{
+            background-color: #8c3a7a;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+            <div class="result">Enter math equation</div>
+            <div class="MEX">M/EX</div>
+            <div class="Mplus">M+</div>
+            <div class="Mminus">M-</div>
+            <div class="MR">MR</div>
+            <div class="MC">MC</div>
+            <div class="GT">GT</div>
+            <div class="AC" onclick="clearRes()">AC</div>
+            <div class="seven" onclick="addSeven()">7</div>
+            <div class="eight" onclick="addEight()">8</div>
+            <div class="nine" onclick="addNine()">9</div>
+            <div class="percent">%</div>
+            <div class="tick">✓</div>
+            <div class="plusminus">+-</div>
+            <div class="four" onclick="addFour()">4</div>
+            <div class="five" onclick="addFive()">5</div>
+            <div class="six" onclick="addSix()">6</div>
+            <div class="x">x</div>
+            <div class="slash">/</div>
+            <div class="right">➤</div>
+            <div class="one" onclick="addOne()">1</div>
+            <div class="two" onclick="addTwo()">2</div>
+            <div class="three" onclick="addThree()">3</div>
+            <div class="plus">+</div>
+            <div class="minus">-</div>
+            <div class="C" onclick="clearLastDigit()">C</div>
+            <div class="zero" onclick="addZero()">0</div>
+            <div class="dzero" onclick="addDZero()">00</div>
+            <div class="dot">.</div>
+            <div class="equal" onclick="showEm()">=</div>
+            <div class="toleft">(</div>
+            <div class="toright">)</div>
+            <div class="Ans">Ans</div>
+            <div class="expo">EXP</div>
+            <div class="e">e</div>
+            <div class="pi">π</div>
+            <div class="log">log</div>
+            <div class="xto2">x
+                <sup>y</sup>
+            </div>
+            <div class="xdownto2">√</div>
+            <div class="xshout">x!</div>
+    </div>
+    <script>
+        let container = document.getElementsByClassName("grid-container");
+        let result = document.getElementsByClassName("result");
+        let MEX = document.getElementsByClassName("MEX");
+        let Mplus = document.getElementsByClassName("Mplus");
+        let Mminus = document.getElementsByClassName("Mminus");
+        let MR = document.getElementsByClassName("MR");
+        let MC = document.getElementsByClassName("MC");
+        let GT = document.getElementsByClassName("GT");
+        let AC = document.getElementsByClassName("AC");
+        let seven = document.getElementsByClassName("seven");
+        let eight = document.getElementsByClassName("eight");
+        let nine = document.getElementsByClassName("nine");
+        let percent = document.getElementsByClassName("percent");
+        let tick = document.getElementsByClassName("tick");
+        let plusminus = document.getElementsByClassName("plusminus");
+        let four = document.getElementsByClassName("four");
+        let five = document.getElementsByClassName("five");
+        let six = document.getElementsByClassName("six");
+        let x = document.getElementsByClassName("x");
+        let slash = document.getElementsByClassName("slash");
+        let right = document.getElementsByClassName("right");
+        let one = document.getElementsByClassName("one");
+        let two = document.getElementsByClassName("two");
+        let three = document.getElementsByClassName("three");
+        let plus = document.getElementsByClassName("plus");
+        let minus = document.getElementsByClassName("minus");
+        let C = document.getElementsByClassName("C");
+        let zero = document.getElementsByClassName("zero");
+        let dzero = document.getElementsByClassName("dzero");
+        let dot = document.getElementsByClassName("dot");
+        let equal = document.getElementsByClassName("equal");
+
+        let line = 0;
+        let equation = 0;
+
+        function addZero() {
+            line = 0;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addOne(){
+            line = 1;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addTwo(){
+            line = 2;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addThree(){
+            line = 3;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addFour(){
+            line = 4;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addFive(){
+            line = 5;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addSix(){
+            line = 6;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addSeven(){
+            line = 7;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addEight(){
+            line = 8;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addNine(){
+            line = 9;
+            equation = (equation * 10) + line;
+            result[0].innerHTML = equation;
+        }
+        function addDZero(){
+            line = 00;
+            equation = (equation * 100) + line;
+            result[0].innerHTML = equation;
+        }
+        function clearRes(){
+            equation = 0;
+            result[0].innerHTML = "Enter math equation";
+        }
+        function clearLastDigit(){
+            equation -= Math.floor(equation % 10);
+            equation /= 10;
+            result[0].innerHTML = equation;
+        }
+
+        setInterval(function(){
+            if(equation === 1234){
+                showEm();
+            }
+            else{
+                console.log(equation);
+            }
+        }, 1000);
+
+        function showEm(){
+            //Sorry :d
+            window.location.href = "https://www.youtube.com/watch?v=d1YBv2mWll0";
+        }
+    </script>
+</body>
+</html>
