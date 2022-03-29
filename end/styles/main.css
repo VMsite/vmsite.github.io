@@ -257,8 +257,14 @@ footer > p{
   .container > .centerBox > .aboutBox > .textBox > p {
     font-size: 20px;
   }
+
+  .contactCirs{
+    flex-direction: column;
+  }
+
   .contColumn > p {
     font-size: 14px;
+    padding: 15px 0 15px 0;
   }
 
   .contactCir {
@@ -281,9 +287,17 @@ footer > p{
     font-size: 10px;
   }
 
+  .contactCirs{
+    flex-direction: column;
+  }
+
+  .contColumn > p{
+    padding: 10px 0 10px 0;
+  }
+
   .contactCir {
-    width: 30px;
-    height: 30px;
+    width: 50px;
+    height: 50px;
     margin-left: 10px;
     margin-right: 10px;
   }
