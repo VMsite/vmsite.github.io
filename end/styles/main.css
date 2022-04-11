@@ -22,18 +22,19 @@ nav {
   align-items: center;
 }
 
-nav > ul {
+nav>ul {
   display: flex;
   justify-content: center;
   transform: translateY(-50px);
 }
 
-nav > ul > li {
+nav>ul>li {
   padding-left: 20%;
   padding-right: 20%;
+  list-style: none;
 }
 
-nav > ul > li > a {
+nav>ul>li>a {
   color: #858585;
   text-decoration: none;
   font-size: 18px;
@@ -68,14 +69,14 @@ nav > ul > li > a {
   width: 60%;
 }
 
-.left-content > h1 {
+.left-content>h1 {
   font-family: "Pattaya", sans-serif;
   font-size: 80px;
   margin-bottom: 40px;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.46);
 }
 
-.left-content > p {
+.left-content>p {
   font-size: 26px;
   color: #797878;
   margin-bottom: 5px;
@@ -95,28 +96,124 @@ nav > ul > li > a {
   justify-content: center;
 }
 
-.right > svg {
+.right>svg {
   rotate: 180deg;
   transform: scaleX(-1);
 }
 
-.container > .centerBox {
+.container>.centerBox {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.container > .centerBox > .aboutBox {
+.container>.centerBox>.aboutBox {
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-10px);
   width: 70%;
 }
 
+.base {
+  display: flex;
+  height: 100%;
+}
+
+.line {
+  width: 60%;
+  height: 1px;
+  background-color: #797878;
+}
+
+.blogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
+
+.blog {
+  display: flex;
+  text-decoration: none;
+  color: #858585;
+  border: #ae946a 1px solid;
+  border-radius: 5px;
+  height: 18%;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 85%;
+}
+
+.blog>.image {
+  width: 30%;
+  display: flex;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-right: #ae946a 1px solid;
+}
+
+.blog-content {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  padding: 20px;
+}
+
+.blog-text {
+  height: 80%;
+}
+
+.blog-heading{
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  color:#ae946a;
+  font-size: 20px;
+}
+
+.blog-context{
+  display: flex;
+  justify-content: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  color:#797878;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.nav-line{
+  display: flex;
+  justify-content: center;
+}
+
+.blog-line{
+  height: 1px;
+  width: 80%;  
+  background-color: #797878;
+}
+
+.author{
+  display: flex;
+  justify-content: center;
+  padding: 5%;
+  color:#797878;
+  font-size: 16px;
+  text-align: justify;
+}
+
+.date {
+  height: 20%;
+}
+
 .circles {
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  flex-wrap: wrap;
+  height: 100px;
+  width: 370px;
+  position: relative;
+  right: 50px;
+  top: 50px;
 }
 
 .circle {
@@ -139,14 +236,14 @@ nav > ul > li > a {
   background-color: #ae946a;
 }
 
-.container > .centerBox > .aboutBox > h1 {
+.container>.centerBox>.aboutBox>h1 {
   font-family: "Pattaya", sans-serif;
   font-size: 80px;
   margin-bottom: 40px;
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.46);
 }
 
-.container > .centerBox > .aboutBox > .textBox > p {
+.container>.centerBox>.aboutBox>.textBox>p {
   font-size: 28px;
   line-height: 1.4;
   color: #797878;
@@ -155,14 +252,14 @@ nav > ul > li > a {
   text-shadow: 0px 4px 4px rgba(255, 255, 255, 0.46);
 }
 
-.container > .content {
+.container>.content {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.container > .content > h1 {
+.container>.content>h1 {
   font-family: "Pattaya", sans-serif;
   font-size: 80px;
   margin-bottom: 40px;
@@ -178,7 +275,7 @@ nav > ul > li > a {
   text-align: center;
 }
 
-.contColumn > p {
+.contColumn>p {
   padding-top: 20px;
   font-family: Orienta;
   color: #ae946a;
@@ -199,7 +296,7 @@ nav > ul > li > a {
   transition: all 200ms;
 }
 
-.contactCir > i {
+.contactCir>i {
   color: whitesmoke;
 }
 
@@ -208,61 +305,97 @@ nav > ul > li > a {
   transform: rotate(10deg);
 }
 
-footer{
+
+
+footer {
   height: 10%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
-footer > p{
+footer>p {
   margin-right: 50px;
 }
 
 @media (min-width: 650px) {
-  .contactCir > i{
+  .contactCir>i {
     scale: 2;
   }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1340px) {
+  .blog-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 975px) {
+  .blog-content {
+    font-size: 12px;
+  }
+
   .right {
     display: none;
   }
+
   .left {
     width: 100%;
   }
-  .left-content > p {
+
+  .left-content>p {
     font-size: 20px;
   }
-  .container > .centerBox > .aboutBox > h1 {
+
+  .container>.centerBox>.aboutBox>h1 {
     font-size: 50px;
   }
-  .container > .centerBox > .aboutBox > .textBox > p {
+
+  .container>.centerBox>.aboutBox>.textBox>p {
     font-size: 24px;
   }
-  .contColumn > p {
+
+  .contColumn>p {
     font-size: 16px;
   }
+
   .contactCir {
     width: 80px;
     height: 80px;
   }
+
+  .blog>.image {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1515px) {
+  .circles {
+    display: none;
+  }
+}
+
+@media (max-width: 710px) {
+  .blog-content {
+    font-size: 10px;
+  }
 }
 
 @media (max-width: 650px) {
-  .container > .centerBox > .aboutBox > h1 {
+  .container>.centerBox>.aboutBox>h1 {
     font-size: 40px;
   }
-  .container > .centerBox > .aboutBox > .textBox > p {
+
+  .container>.centerBox>.aboutBox>.textBox>p {
     font-size: 20px;
   }
 
-  .contactCirs{
+  .contactCirs {
     flex-direction: column;
   }
 
-  .contColumn > p {
+  .contColumn>p {
     font-size: 14px;
     padding: 15px 0 15px 0;
   }
@@ -275,23 +408,38 @@ footer > p{
   }
 }
 
+@media (max-width: 530px) {
+  .blog-content {
+    font-size: 8px;
+  }
+}
+
 @media (max-width: 460px) {
-  .container > .centerBox > .aboutBox > h1 {
+  nav>ul>li>a {
+    font-size: 12px;
+  }
+
+  .blog-content {
+    font-size: 7px;
+  }
+
+  .container>.centerBox>.aboutBox>h1 {
     font-size: 40px;
   }
-  .container > .centerBox > .aboutBox > .textBox > p {
+
+  .container>.centerBox>.aboutBox>.textBox>p {
     font-size: 15px;
   }
 
-  .contColumn > p {
+  .contColumn>p {
     font-size: 10px;
   }
 
-  .contactCirs{
+  .contactCirs {
     flex-direction: column;
   }
 
-  .contColumn > p{
+  .contColumn>p {
     padding: 10px 0 10px 0;
   }
 

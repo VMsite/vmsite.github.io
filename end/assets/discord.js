@@ -1,5 +1,5 @@
 const discord = document.querySelector('#discord');
-const userName = "Vojtysek#9079";
+const userName = "Vojtysek#2870";
 const discordText = document.querySelector('#discordText');
 
 function delay(time) {
@@ -16,3 +16,4 @@ discord.addEventListener("click", () => {
 
 //Finished
 // Language: javascript
+// Path: assets/discord.js
