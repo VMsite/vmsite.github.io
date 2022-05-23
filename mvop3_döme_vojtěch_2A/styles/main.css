@@ -178,7 +178,7 @@ nav>ul>li>a {
   padding-left: 5%;
   padding-right: 5%;
   color:#797878;
-  font-size: 18px;
+  font-size: 16px;
   text-align: justify;
 }
 
@@ -418,11 +418,7 @@ footer>p {
   }
 
   .blog-content {
-    font-size:  7.5px;
-  }
-
-  .blog-context{
-    font-size: 14px;
+    font-size: 7px;
   }
 
   .container>.centerBox>.aboutBox>h1 {
